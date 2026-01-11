@@ -12,6 +12,17 @@ if(action.type==='decrement'){
         counter:state.counter-1
     };
 }
+if(action.type==='INCREMENTBY2'){
+    return{
+        counter:state.counter+2
+    };
+}
+if(action.type==='DECREMENTBY2'){
+    return{
+        counter:state.counter-2
+    };
+}
+
 return state;
 };
 
@@ -29,6 +40,8 @@ for (let i=0;i<5;i++){
 store.dispatch({type:'increment'});
 }
 store.dispatch({type:'decrement'});
+store.dispatch({type:'INCREMENTBY2'});
+store.dispatch({type:'DECREMENTBY2'});
 
 
 
